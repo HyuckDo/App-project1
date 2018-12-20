@@ -79,21 +79,18 @@ public class menubar extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        
+        FragmentManager manager = getFragmentManager();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
+        if (id == R.id.nav_first_layout) {
+            manager.beginTransaction().replace(R.id.content_main, new Firstlayout()).commit();
+        } else if (id == R.id.nav_second_layout) {
+            manager.beginTransaction().replace(R.id.content_main, new Secondlayout()).commit();
+        }  else if (id == R.id.nav_login_layout) {
+            manager.beginTransaction().replace(R.id.content_main, new Login()).commit();
+        } /*else if (id == R.id.nav_activity_main2) {
+            manager.beginTransaction().replace(R.id.content_main, new Main()).commit();
+        }*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
