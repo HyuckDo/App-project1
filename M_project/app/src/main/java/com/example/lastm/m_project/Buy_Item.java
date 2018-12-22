@@ -17,7 +17,7 @@ public class Buy_Item extends AppCompatActivity {
     GridView gridView;
     String[] list_des={"하나","둘","셋"};
     String[] list_price={"1","2","3"};
-    int[] list_image={R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,R.drawable.ic_launcher_background};
+    int[] list_image={R.drawable.background,R.drawable.book,R.drawable.item};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,8 @@ public class Buy_Item extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(),Buy_Item_detail.class);
-                intent.putExtra("price",list_price[position]);
-                intent.putExtra("des",list_des[position]);
-                intent.putExtra("image",list_image[position]);
+                Intent intent = new Intent(Buy_Item.this,ListScreen.class);
+
                 startActivity(intent);
             }
         });

@@ -1,5 +1,4 @@
-/*
-package com.example.lastm.m_project.;
+package com.example.lastm.m_project;
 
 
 
@@ -7,7 +6,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -29,22 +27,16 @@ import java.util.GregorianCalendar;
 
 import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
-*/
 /**
  * Created by 김민석 on 2018-12-22.
- *//*
+ */
 
-
-public class First_layout extends Fragment {
+public class Firstlayout extends Fragment {
 
     private GridView gv;
-    */
-/* private ArrayAdapter<String> adapter;*//*
+    /* private ArrayAdapter<String> adapter;*/
 
-
-    */
-/*private static String[] spacecrafts = {"Columbia", "Apollo 15", "Apollo 17", "Chandra"};*//*
-
+    /*private static String[] spacecrafts = {"Columbia", "Apollo 15", "Apollo 17", "Chandra"};*/
     private String[] list_des = {"하나", "둘", "셋"};
     private String[] list_price = {"1", "2", "3"};
     private int[] list_image = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background};
@@ -63,41 +55,29 @@ public class First_layout extends Fragment {
         View rootView = inflater.inflate(R.layout.first_layout, null);
 
 
-        */
-/*gv = (GridView) rootView.findViewById(R.id.first_layout_GV);*//*
-
+        /*gv = (GridView) rootView.findViewById(R.id.first_layout_GV);*/
 
         gv = (GridView) rootView.findViewById(R.id.first_layout_GV);
 
         CustomAdapter customAdpter = new CustomAdapter();
         gv.setAdapter(customAdpter);
-        */
-/* gv.setAdapter((new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list_price)));*//*
-
+        /* gv.setAdapter((new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list_price)));*/
 
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long I) {
-                */
-/* adapterView.getItemAtPosition(position);
+                /* adapterView.getItemAtPosition(position);
 
-                 *//*
-
-                */
-/*Toast.makeText(getActivity(), list_price[position], Toast.LENGTH_SHORT).show();
+                 */
+                /*Toast.makeText(getActivity(), list_price[position], Toast.LENGTH_SHORT).show();
                 Toast.makeText(getActivity(), list_des[position], Toast.LENGTH_SHORT).show();
-                Toast.makeText(getActivity(), list_image[position], Toast.LENGTH_SHORT).show();*//*
-
-               */
-/* Intent intent = new Intent(getActivity(),Detail.class);
+                Toast.makeText(getActivity(), list_image[position], Toast.LENGTH_SHORT).show();*/
+               /* Intent intent = new Intent(getActivity(),Detail.class);
                 intent.putExtra("price",list_price[position]);
                 intent.putExtra("des",list_des[position]);
                 intent.putExtra("image",list_image[position]);
-                startActivity(intent);*//*
-
-                */
-/*Firstlayout.this.getFragmentManager().beginTransaction().replace(R.id.first_layout_GV, Detail.newInstance()).commit();*//*
-
+                startActivity(intent);*/
+                /*Firstlayout.this.getFragmentManager().beginTransaction().replace(R.id.first_layout_GV, Detail.newInstance()).commit();*/
 
                 Intent intent=new Intent(getActivity(), ListScreen2.class);
                 intent.putExtra("price",list_price[position]);
@@ -109,20 +89,14 @@ public class First_layout extends Fragment {
 
         });
 
-            */
-/*@Override
+            /*@Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), Detail.class);
-                *//*
-*/
-/*intent.putExtra("price",list_price[position]);
+                *//*intent.putExtra("price",list_price[position]);
                 intent.putExtra("des",list_des[position]);*//*
-*/
-/*
                 intent.putExtra("image",list_image[position]);
                 startActivity(intent);
-            }*//*
-
+            }*/
         return rootView;
     }
 
@@ -165,4 +139,3 @@ public class First_layout extends Fragment {
 
 
 }
-*/
