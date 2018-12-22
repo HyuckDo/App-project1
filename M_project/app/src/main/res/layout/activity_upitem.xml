@@ -22,7 +22,7 @@
                 android:text="상품명" />
 
             <EditText
-                android:id="@+id/editText1"
+                android:id="@+id/text_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -36,17 +36,18 @@
                 android:text="카테고리" />
 
             <RadioGroup
+                android:id="@+id/check_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/check_book"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="책"/>
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/check_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -61,19 +62,19 @@
                 android:text="상품 이미지" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/image"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="이미지 가져오기"
+                android:onClick="onImageClick"
                 />
 
-            <ImaeView
-                android:id="@+id/imageView1"
+            <ImageView
+                android:id="@+id/item_image"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
-                android:scaleType="center"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:scaleType="center" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -82,7 +83,7 @@
                 android:text="가격" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -96,7 +97,7 @@
                 android:text="상품 설명" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/item_explain"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginBottom="20dp"
@@ -104,16 +105,19 @@
                 android:inputType="text" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/upload"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="등록하기"
-                android:onClick="onclickup"
+                android:onClick="onClickUp"
                 />
-
+            <ImageView
+                android:id="@+id/item_image2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="center"/>
 
         </LinearLayout>
-
 
     </ScrollView>
 </LinearLayout>

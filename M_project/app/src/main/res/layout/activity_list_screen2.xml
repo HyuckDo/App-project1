@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListScreen"
+    tools:context="ListScreen2"
     android:orientation="vertical"
     android:background="#FFF">
+
+    <!--tools:context="com.example.test01.ListScreen2"-->
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,7 +31,7 @@
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="상품명(출력)"
+                android:text="게임CD"
                 android:textSize ="20dp"/>
 
             <TextView
@@ -34,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="게시자 : (닉네임출력)" />
+                android:text="게시자 : 모바일앱" />
 
 
 
@@ -42,7 +47,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="가격(출력)"
+                android:text="25,000원"
                 android:textSize="20dp"
                 android:textColor="#ff0000"
                 android:gravity="center_horizontal"/>
@@ -52,7 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="상세설명(출력)" />
+                android:text="어쌔신 크리드 오리진
+코드 미사용 뜨끈뜨끈 신품 팝니다. " />
 
             <TextView
                 android:id="@+id/textView5"
@@ -89,4 +95,16 @@
 
     </ScrollView>
 
+    <include layout="@layout/content_list_screen2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
 </LinearLayout>
+
+

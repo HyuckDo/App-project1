@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Buy_Item">
+    tools:context=".Buy_Item"
+    android:background="#FFF">
 
     <GridView
         android:id="@+id/grid_view"

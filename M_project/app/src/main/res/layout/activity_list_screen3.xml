@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListScreen"
+    tools:context="ListScreen2"
     android:orientation="vertical"
     android:background="#FFF">
+
+    <!--tools:context="com.example.test01.ListScreen2"-->
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -89,4 +94,16 @@
 
     </ScrollView>
 
+    <include layout="@layout/content_list_screen2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
 </LinearLayout>
+
+
