@@ -4,6 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -13,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
 
@@ -20,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         switch (v.getId()){
             case R.id.buy_book :
-                Intent i = new Intent(MainActivity.this, Buy_Item.class);
+                Intent i = new Intent(MainActivity.this, Buy_Item1.class);
                 startActivity(i);
                 break;
             case R.id.buy_item :
-                Intent i2 = new Intent(MainActivity.this, Buy_Item.class);
+                Intent i2 = new Intent(MainActivity.this, Buy_Item2.class);
                 startActivity(i2);
                 break;
             case R.id.sell_LL :
@@ -33,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
 
 
 }
